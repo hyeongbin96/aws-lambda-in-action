@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing Alert</title>
+    <style>
+        /* 상단 주황색 라인 스타일 */
+        .orange-line {
+            background-color: #ff9900;
+            /* AWS 주황색 */
+            height: 3px;
+            width: 100%;
+        }
+
+        p {
+            line-height: 0.8;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+
+        .header {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="orange-line"></div>
+    <p>최상위 근본 원인(서비스) : {{dimensionalValue}}</p>
+    <p>이상 탐지 기간 : {{anomalyStartDate}} ~ {{anomalyEndDate}}</p>
+    <p>총 비용 영향 : {{totalImpact}}$ </p>
+    <p>예상 지출 : {{totalExpectedSpend}}$</p>
+    <p>실제 지출 : {{totalActualSpend}}$</p>
+    <p>영향도(%) : {{totalImpactPercentage}}%</p>
+    <br>
+    <h3>잠재적 근본 원인</h3>
+    <p>전체 근본 원인 영향은 전체 이상 징후 비용 영향과 다를 수 있습니다.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>비용 영향</th>
+                <th>서비스</th>
+                <th>계정</th>
+                <th>리전</th>
+                <th>사용 유형</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</body>
+
+</html>
