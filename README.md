@@ -1,2 +1,2 @@
-# aws-lambda-in-action
-직접 aws를 운영하며 구축한 유용한 람다 함수 모음
+# aws lambda
+AWS 운영과정에서 유용하게 사용한 람다 함수
